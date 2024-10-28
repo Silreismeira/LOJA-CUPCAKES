@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Cupcakes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>World of Cupcakes</h1>
+        <p>Os melhores cupcakes para adoçar seu dia!</p>
+    </header>
+    <main>
+        <section id="cupcakes">
+            <h2>Nosso Menu</h2>
+            <div class="cupcake-item">
+                <img src="https://via.placeholder.com/150" alt="Cupcake de Chocolate">
+                <h3>Cupcake de Chocolate</h3>
+                <p>R$5,00</p>
+                <button onclick="comprar()">Comprar</button>
+            </div>
+            <div class="cupcake-item">
+                <img src="https://via.placeholder.com/150" alt="Cupcake de Morango">
+                <h3>Cupcake de Morango</h3>
+                <p>R$6,00</p>
+                <button onclick="comprar()">Comprar</button>
+            </div>
+            <div class="cupcake-item">
+                <img src="https://via.placeholder.com/150" alt="Cupcake de Baunilha">
+                <h3>Cupcake de Baunilha</h3>
+                <p>R$5,50</p>
+                <button onclick="comprar()">Comprar</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 World of Cupcakes - Todos os direitos reservados</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
