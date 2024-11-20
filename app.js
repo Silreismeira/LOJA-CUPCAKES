@@ -1,32 +1,22 @@
-
-const express = require('express');
-const app = express();
-const port = 3000;
-
-app.use(express.json());  // Para interpretar JSON enviado nas requisições
-
-// Dados de exemplo de cupcakes
-const cupcakes = [
-  { id: 1, nome: "Cupcake de Chocolate", preco: 5.00 },
-  { id: 2, nome: "Cupcake de Baunilha", preco: 4.50 },
-  { id: 3, nome: "Cupcake de Red Velvet", preco: 6.00 }
-];
-
-// Endpoint para listar todos os cupcakes
-app.get('/api/cupcakes', (req, res) => {
-  res.json(cupcakes);
+// Selecione todos os botões "Adicionar ao Carrinho"
+document.querySelectorAll('.add-to-cart').forEach(button => {
+  // Adiciona um evento de clique a cada botão
+  button.addEventListener('click', () => {
+      // Encontre o elemento que mostra a quantidade de itens no carrinho
+      const cartCountElement = document.getElementById('cart-count');
+      
+      // Pegue o número atual de itens no carrinho e converta de string para número
+      let cartCount = parseInt(cartCountElement.innerText);
+      
+      // Aumente o número de itens no carrinho em 1
+      cartCountElement.innerText = cartCount + 1;
+  });
 });
 
-// Endpoint para adicionar um pedido (exemplo simples)
-app.post('/api/pedido', (req, res) => {
-  const pedido = req.body; // Dados do pedido
-  console.log('Pedido recebido:', pedido);
-  res.status(201).send('Pedido realizado com sucesso');
-});
 
-// Servir arquivos estáticos (front-end)
-app.use(express.static('public'));
 
-app.listen(port, () => {
-  console.log(`Servidor rodando em http://localhost:${port}`);
-});
+
+
+
+
+
